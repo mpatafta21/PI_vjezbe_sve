@@ -15,15 +15,15 @@ namespace PI_vjezbe_sve.Repositories
         {
             Student student = null;
             string sql = $"SELECT * FROM Students WHERE Id = {id}";
-            DBLayer.DB.OpenConnection();
-            var reader = DBLayer.DB.GetDataReader(sql);
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
             if (reader.HasRows)
             {
                 reader.Read();
                 student = CreateObject(reader);
                 reader.Close();
             }
-            DBLayer.DB.CloseConnection();
+            DB.CloseConnection();
             return student;
         }
         public static List<Student> GetStudents()
