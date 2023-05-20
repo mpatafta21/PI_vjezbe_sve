@@ -17,6 +17,9 @@ namespace PI_vjezbe_sve
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmLogin());
-        }
+            DB.SetConfiguration("PI2023_moja-baza_DB", "moje_korime", "moja_lozinka");
+
+         }
+ 
     }
 }
