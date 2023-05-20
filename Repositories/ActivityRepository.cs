@@ -27,45 +27,41 @@ namespace PI_vjezbe_sve.Repositories
             return activity;
         }
 
-        internal static object GetActivities()
+        public static List<Activity> GetActivities()
         {
-            throw new NotImplementedException();
+            List<Activity> activities = new List<Activity>();
+            string sql = "SELECT * FROM Activities";
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+            while (reader.Read())
+            {
+                Activity activity = CreateObject(reader);
+                activities.Add(activity);
+            }
+            reader.Close();
+            DB.CloseConnection();
+            return activities;
         }
-    }
-    public static List<Activity> GetActivities()
-    {
-        List<Activity> activities = new List<Activity>();
-        string sql = "SELECT * FROM Activities";
-        DB.OpenConnection();
-        var reader = DB.GetDataReader(sql);
-        while (reader.Read())
+        private static Activity CreateObject(SqlDataReader reader)
         {
-            Activity activity = CreateObject(reader);
-            activities.Add(activity);
+            int id = int.Parse(reader["Id"].ToString());
+            string name = reader["Name"].ToString();
+            string description = reader["Description"].ToString();
+            int maxPoints = int.Parse(reader["MaxPoints"].ToString());
+            int minPointsForGrade =
+            int.Parse(reader["MinPointsForGrade"].ToString());
+            int minPointsForSignature =
+           int.Parse(reader["MinPointsForSignature"].ToString());
+            var activity = new Activity
+            {
+                Id = id,
+                Name = name,
+                Description = description,
+                MaxPoints = maxPoints,
+                MinPointsForGrade = minPointsForGrade,
+                MinPointsForSignature = minPointsForSignature
+            };
+            return activity;
         }
-        reader.Close();
-        DB.CloseConnection();
-        return activities;
-    }
-    private static Activity CreateObject(SqlDataReader reader)
-    {
-        int id = int.Parse(reader["Id"].ToString());
-        string name = reader["Name"].ToString();
-        string description = reader["Description"].ToString();
-        int maxPoints = int.Parse(reader["MaxPoints"].ToString());
-        int minPointsForGrade =
-        int.Parse(reader["MinPointsForGrade"].ToString());
-        int minPointsForSignature =
-       int.Parse(reader["MinPointsForSignature"].ToString());
-        var activity = new Activity
-        {
-            Id = id,
-            Name = name,
-            Description = description,
-            MaxPoints = maxPoints,
-            MinPointsForGrade = minPointsForGrade,
-            MinPointsForSignature = minPointsForSignature
-        };
-        return activity;
     }
 }

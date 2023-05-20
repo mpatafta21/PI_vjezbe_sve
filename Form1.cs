@@ -62,5 +62,10 @@ namespace PI_vjezbe_sve
         {
 
         }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
