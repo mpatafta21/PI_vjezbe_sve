@@ -41,6 +41,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(89, 20);
             this.txtUsername.TabIndex = 0;
+            this.txtUsername.Text = "nastavnik";
             // 
             // label1
             // 
@@ -57,6 +58,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(89, 20);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.Text = "test";
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // label2
@@ -95,6 +97,7 @@
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prijava";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

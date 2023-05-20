@@ -26,6 +26,11 @@ namespace PI_vjezbe_sve.Repositories
             DB.CloseConnection();
             return activity;
         }
+
+        internal static object GetActivities()
+        {
+            throw new NotImplementedException();
+        }
     }
     public static List<Activity> GetActivities()
     {

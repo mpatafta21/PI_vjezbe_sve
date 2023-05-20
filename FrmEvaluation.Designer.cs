@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.cboActivites = new System.Windows.Forms.ComboBox();
+            this.cboActivities = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMinForSignature = new System.Windows.Forms.TextBox();
             this.txtMinForGrade = new System.Windows.Forms.TextBox();
@@ -55,14 +55,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Aktivnost:";
             // 
-            // cboActivites
+            // cboActivities
             // 
-            this.cboActivites.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboActivites.FormattingEnabled = true;
-            this.cboActivites.Location = new System.Drawing.Point(16, 30);
-            this.cboActivites.Name = "cboActivites";
-            this.cboActivites.Size = new System.Drawing.Size(216, 21);
-            this.cboActivites.TabIndex = 1;
+            this.cboActivities.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboActivities.FormattingEnabled = true;
+            this.cboActivities.Location = new System.Drawing.Point(16, 30);
+            this.cboActivities.Name = "cboActivities";
+            this.cboActivities.Size = new System.Drawing.Size(216, 21);
+            this.cboActivities.TabIndex = 1;
             // 
             // label2
             // 
@@ -194,10 +194,11 @@
             this.Controls.Add(this.txtMinForGrade);
             this.Controls.Add(this.txtMinForSignature);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cboActivites);
+            this.Controls.Add(this.cboActivities);
             this.Controls.Add(this.label1);
             this.Name = "FrmEvaluation";
             this.Text = "FrmEvaluation";
+            this.Load += new System.EventHandler(this.FrmEvaluation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -207,7 +208,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cboActivites;
+        private System.Windows.Forms.ComboBox cboActivities;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMinForSignature;
         private System.Windows.Forms.TextBox txtMinForGrade;

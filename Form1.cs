@@ -56,7 +56,9 @@ namespace PI_vjezbe_sve
 
         }
 
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }
