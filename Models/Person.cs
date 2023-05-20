@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PI_vjezbe_sve.Models
 {
-    public abstract class Person
+    public abstract class Person : object
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
@@ -16,19 +16,4 @@ namespace PI_vjezbe_sve.Models
             return FirstName + " " + LastName;
         }
     }
-    public class Teacher : Person
-    {
-        public string Username { get; set; }
-        public string Password { get; set; }
-        public bool CheckPassword(string password)
-        {
-            return Password == password;
-        }
-
-    }
-    public class Student : Person
-    {
-        public int Grade { get; set; }
-    }
-
 }
