@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PI_vjezbe_sve.Models;
+using PI_vjezbe_sve.Repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +14,7 @@ namespace PI_vjezbe_sve
 {
     public partial class FrmLogin : Form
     {
-        string username = "nastavnik";
-        string password = "test";
+        public static Teacher LoggedTeacher { get; set; }
 
         public FrmLogin()
         {
@@ -40,7 +41,8 @@ namespace PI_vjezbe_sve
             }
             else
             {
-                if (txtUsername.Text == username && txtPassword.Text == password)
+                LoggedTeacher = TeacherRepository.GetTeacher(txtUsername.Text);
+                if (LoggedTeacher != null && LoggedTeacher.CheckPassword(txtPassword.Text))
                 {
                     FrmStudents frmStudents = new FrmStudents();
                     Hide();
