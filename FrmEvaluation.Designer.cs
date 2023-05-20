@@ -39,11 +39,11 @@
             this.txtTeacher = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtEvaluationDate = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numPoints = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPoints)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -142,13 +142,13 @@
             this.txtEvaluationDate.Size = new System.Drawing.Size(100, 20);
             this.txtEvaluationDate.TabIndex = 10;
             // 
-            // numericUpDown1
+            // numPoints
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(408, 248);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(81, 20);
-            this.numericUpDown1.TabIndex = 11;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numPoints.Location = new System.Drawing.Point(408, 248);
+            this.numPoints.Name = "numPoints";
+            this.numPoints.Size = new System.Drawing.Size(81, 20);
+            this.numPoints.TabIndex = 11;
+            this.numPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
@@ -186,7 +186,7 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numPoints);
             this.Controls.Add(this.txtEvaluationDate);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtTeacher);
@@ -201,7 +201,7 @@
             this.Name = "FrmEvaluation";
             this.Text = "FrmEvaluation";
             this.Load += new System.EventHandler(this.FrmEvaluation_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPoints)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,7 +220,7 @@
         private System.Windows.Forms.TextBox txtTeacher;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtEvaluationDate;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numPoints;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
