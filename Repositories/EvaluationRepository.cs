@@ -77,6 +77,9 @@ namespace PI_vjezbe_sve.Repositories
             DB.CloseConnection();
         }
 
-
+        internal static object GetEvaluation(object selectedStudent, Activity currentActivity)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

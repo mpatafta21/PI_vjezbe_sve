@@ -15,6 +15,9 @@ namespace PI_vjezbe_sve
     public partial class FrmEvaluation : Form
     {
         private Student student;
+
+        public Student SelectedStudent { get; private set; }
+
         public FrmEvaluation(Models.Student selectedStudent)
         {
             InitializeComponent();

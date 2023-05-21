@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using DBLayer;
 using System.Threading.Tasks;
 
 namespace PI_vjezbe_sve.Repositories
